@@ -1,0 +1,12 @@
+C:\Users\10a\Desktop\123\Helpers\bin\Debug\net7.0-windows\Helpers.deps.json
+C:\Users\10a\Desktop\123\Helpers\bin\Debug\net7.0-windows\Helpers.dll
+C:\Users\10a\Desktop\123\Helpers\bin\Debug\net7.0-windows\Helpers.pdb
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\Helpers.csproj.AssemblyReference.cache
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\Helpers.AssemblyInfoInputs.cache
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\Helpers.AssemblyInfo.cs
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\Helpers.csproj.CoreCompileInputs.cache
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\Helpers.dll
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\refint\Helpers.dll
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\Helpers.pdb
+C:\Users\10a\Desktop\123\Helpers\obj\Debug\net7.0-windows\ref\Helpers.dll

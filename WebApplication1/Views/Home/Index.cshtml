@@ -1,0 +1,14 @@
+﻿@model WebAPI.Models.HomeModel
+
+<div>
+    <h3 class="block_header">Авторизация</h3>
+    <form class="main_form" method="post" asp-action="Login">
+        <content>Логин:</content>
+        <input name="login" type="text"/>
+        <br />
+        <content>Пароль:</content>
+        <input name="password" type="password" />
+        <br />
+        <button type="submit">Войти</button>
+    </form>
+</div>

@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "dgSpecHash": "ubgUH2av5Hr+p+N2zIosfcTPxBCFOUpnl1sw/3xlXrbV2jFvqKKaUnUicj7CL7shLduWYug8LqyAyLdbOE6Ugw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Daunello\\Desktop\\123\\TerminalDivisionEmployee\\TerminalDivisionEmployee.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Daunello\\.nuget\\packages\\oxyplot.core\\2.1.2\\oxyplot.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\Daunello\\.nuget\\packages\\oxyplot.pdf\\2.1.2\\oxyplot.pdf.2.1.2.nupkg.sha512",
+    "C:\\Users\\Daunello\\.nuget\\packages\\oxyplot.wpf\\2.1.2\\oxyplot.wpf.2.1.2.nupkg.sha512",
+    "C:\\Users\\Daunello\\.nuget\\packages\\oxyplot.wpf.shared\\2.1.2\\oxyplot.wpf.shared.2.1.2.nupkg.sha512",
+    "C:\\Users\\Daunello\\.nuget\\packages\\pdfsharp-migradoc-gdi\\1.50.5147\\pdfsharp-migradoc-gdi.1.50.5147.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"OxyPlot.Pdf 2.1.2\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net7.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "OxyPlot.Pdf",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"PDFsharp-MigraDoc-gdi 1.50.5147\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net7.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "PDFsharp-MigraDoc-gdi",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
+}

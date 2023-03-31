@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IAvELAbmUk+FMoAmTFUVzgHS/3PNpj+6VgW8FhZYz+Pcejta9PF75zKe8RUXt61EB/0ecC6+qvHK+clAlQ2sKg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Daunello\\Desktop\\Test-main\\TestApiDesktop\\TestApiDesktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Daunello\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,13 @@
+﻿@model WebAPI.Models.Visitor
+@{
+    <h3>Регистрация</h3>
+    <form method="post" asp-action="Registr">
+        <b>Email:</b>
+        <input name="email" type="email" value="@Model.Login" />
+        <br />
+        <b>Пароль:</b>
+        <input name="password" type="password" value="@Model.Password" />
+        <br />
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+}

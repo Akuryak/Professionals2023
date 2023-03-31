@@ -1,0 +1,22 @@
+﻿<Window x:Class="TerminalEmployeeSecurity.Windows.RequestInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TerminalEmployeeSecurity.Windows"
+        mc:Ignorable="d"
+        Title="Заявка" MinHeight="150" Height="150" MinWidth="700" Width="700" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DatePicker x:Name="VisitorLeaveDatePicker" Grid.ColumnSpan="2"/>
+        <Button x:Name="AcceptVisitorButton" Content="Разрешить доступ на територию" Foreground="Green" Grid.Row="1" Click="AcceptVisitorButton_Click"/>
+        <Button x:Name="AcceptVisitorLeaveButton" Content="Зафиксировать убытие" Foreground="Red" Grid.Row="1" Grid.Column="1" Click="AcceptVisitorLeaveButton_Click"/>
+    </Grid>
+</Window>

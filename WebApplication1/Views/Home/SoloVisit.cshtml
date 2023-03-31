@@ -1,0 +1,106 @@
+﻿@model WebAPI.Models.SoloVisit
+
+<div style="display:flex">
+    <form style="margin:15px">
+        <h3 class="block_header">Информация для пропуска</h3>
+        <div style="display:grid" class="main_form">
+            <content>Сорк действия заявки: </content>
+            <div style="display:flex">
+                <section>с*</section>
+                <input name="startDate" required type="date" min="@DateTime.Now.AddDays(1).ToString("yyyy-mm-dd")" onchange="@SoloVisit.InputDate = this"/>
+                <section> по </section>
+                <input name="endDate" required type="date" max="@SoloVisit.InputDate.Value.AddDays(15).ToString("yyyy-mm-dd")" />
+            </div>
+            <content>Цель посещения: </content>
+            <select required>
+                @foreach (PurposOfTheVisit purpose in SoloVisit.GetPurposeOfTheVisits())
+                {
+                    <option id="@purpose.Id" value="@purpose.Id">@purpose.Name</option>
+                }
+            </select>
+        </div>
+    </form>
+    <form style="margin:15px">
+        <h3 class="block_header">Принимающая сторона</h3>
+        <div style="display:grid" class="main_form">
+            <content>Поздразделение*: </content>
+            <select required>
+                @foreach (Division division in SoloVisit.GetDivisions())
+                {
+                    <option id="@division.Id" value="@division.Name">@division.Name</option>
+                }
+            </select>
+            <content>ФИО*:</content>
+            <div style="display:flex">
+                <input name="staffName" type="text" required />
+                <img src="/assets/User.jpg" height="25" width="25" />
+            </div>
+        </div>
+    </form>
+</div>
+<form style="margin:15px">
+    <h3 class="block_header">Информация о посетителе</h3>
+    <div style="display:flex" class="main_form">
+        <div style="display:grid">
+            <div style="display: flex;">
+                <content>Фамилия*: </content>
+                <input name="surname" type="text" required />
+            </div>
+            <div style="display: flex;">
+                <content>Имя*: </content>
+                <input name="name" type="text" required />
+            </div>
+            <div style="display: flex;">
+                <content>Отчество*: </content>
+                <input name="patronomic" type="text" required />
+            </div>
+            <div style="display: flex;">
+                <content>Телефон: </content>
+                <input name="phoneNumber" type="tel" placeholder="(XXX) XXX-XXXX" pattern="\(\d{3}\) \d{3}\-\d{4}" />
+            </div>
+            <div style="display: flex;">
+                <content>E-mail: </content>
+                <input name="email" type="email" />
+            </div>
+        </div>
+        <br />
+        <div style="display:grid">
+            <div style="display: flex;">
+                <content>Организация: </content>
+                <input name="organisation" type="text" />
+            </div>
+            <div style="display: flex;">
+                <content>Примечание: </content>
+                <input name="discription" type="text" />
+            </div>
+            <div style="display: flex;">
+                <content>Дата рождения: </content>
+                <input name="birthdate" type="date" />
+            </div>
+            <div style="display: flex;">
+                <content>Серия: </content>
+                <input name="series" type="number" maxlength="4" />
+            </div>
+            <div style="display: flex;">
+                <content>Номер: </content>
+                <input name="number" type="number" maxlength="6" />
+            </div>
+        </div>
+        <div style="display:flex; text-align: center;">
+            <img asp-for="userImage" src="@SoloVisit.UserPhoto" oninput="@SoloVisit.UserPhoto = this" width="50" height="50"/>
+            <input name="userImage" type="file" />
+        </div>
+    </div>
+</form>
+<div style="display:flex">
+    <form style="margin:15px">
+        <h3 class="block_header">Прикрепляемые документы</h3>
+        <div class="main_form">
+            <input name="userPass" type="file" />
+        </div>
+    </form>
+    <form method="post" style="margin:50px;display:flex">
+        <button type="submit" asp-action="SoloVisit">Очистить форму</button>
+        <button type="submit" asp-action="AddNewRequest">Оформить заявку</button>
+    </form>
+</div>

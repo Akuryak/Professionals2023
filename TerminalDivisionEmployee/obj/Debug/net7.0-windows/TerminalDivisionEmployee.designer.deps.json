@@ -1,0 +1,132 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "OxyPlot.Core/2.1.2": {
+        "runtime": {
+          "lib/netstandard2.0/OxyPlot.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "OxyPlot.Pdf/2.1.2": {
+        "dependencies": {
+          "OxyPlot.Core": "2.1.2",
+          "PDFsharp-MigraDoc-gdi": "1.50.5147"
+        },
+        "runtime": {
+          "lib/net452/OxyPlot.Pdf.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "OxyPlot.Wpf/2.1.2": {
+        "dependencies": {
+          "OxyPlot.Core": "2.1.2",
+          "OxyPlot.Wpf.Shared": "2.1.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OxyPlot.Wpf.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "OxyPlot.Wpf.Shared/2.1.2": {
+        "dependencies": {
+          "OxyPlot.Core": "2.1.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OxyPlot.Wpf.Shared.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "PDFsharp-MigraDoc-gdi/1.50.5147": {
+        "runtime": {
+          "lib/net20/MigraDoc.DocumentObjectModel-gdi.dll": {
+            "assemblyVersion": "1.50.5147.0",
+            "fileVersion": "1.50.5147.0"
+          },
+          "lib/net20/MigraDoc.Rendering-gdi.dll": {
+            "assemblyVersion": "1.50.5147.0",
+            "fileVersion": "1.50.5147.0"
+          },
+          "lib/net20/MigraDoc.RtfRendering-gdi.dll": {
+            "assemblyVersion": "1.50.5147.0",
+            "fileVersion": "1.50.5147.0"
+          },
+          "lib/net20/PdfSharp-gdi.dll": {
+            "assemblyVersion": "1.50.5147.0",
+            "fileVersion": "1.50.5147.0"
+          },
+          "lib/net20/PdfSharp.Charting-gdi.dll": {
+            "assemblyVersion": "1.50.5147.0",
+            "fileVersion": "1.50.5147.0"
+          }
+        },
+        "resources": {
+          "lib/net20/de/MigraDoc.DocumentObjectModel-gdi.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net20/de/MigraDoc.Rendering-gdi.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net20/de/MigraDoc.RtfRendering-gdi.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net20/de/PdfSharp-gdi.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net20/de/PdfSharp.Charting-gdi.resources.dll": {
+            "locale": "de"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OxyPlot.Core/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/BuPL1Wa7ZhpKA2DBe72md+S8PgIHF+UP/NsKfO9BiheXnbns1/tqS7s2MWIR1xFy5i+PWVC67KziGPY48mNgA==",
+      "path": "oxyplot.core/2.1.2",
+      "hashPath": "oxyplot.core.2.1.2.nupkg.sha512"
+    },
+    "OxyPlot.Pdf/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PtWcHpYQUgY9/gDQCJRKYamy+xPU7Z+f/0V+Ndf0nML9ISYPtFMkIG+EmmuiUcIqXOlPmpKBb50Tz8H2YtACRQ==",
+      "path": "oxyplot.pdf/2.1.2",
+      "hashPath": "oxyplot.pdf.2.1.2.nupkg.sha512"
+    },
+    "OxyPlot.Wpf/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-udX9T1YC5BnnTZkVSNgJqvzXLaBcZDYG32YHWlDELk1UDWQeJi0Z2jBLoIiv4hcW16N4ptYO5cGC3e8m5/z0hw==",
+      "path": "oxyplot.wpf/2.1.2",
+      "hashPath": "oxyplot.wpf.2.1.2.nupkg.sha512"
+    },
+    "OxyPlot.Wpf.Shared/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6Cj7UET7AS5gVf77+avKG+PzaKQhTdqRYbyBTCPWW9JEbAsojpNdLICjVXO+5o/HP+DjshZJ6oCFw8eyRnHtCA==",
+      "path": "oxyplot.wpf.shared/2.1.2",
+      "hashPath": "oxyplot.wpf.shared.2.1.2.nupkg.sha512"
+    },
+    "PDFsharp-MigraDoc-gdi/1.50.5147": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hrPNGJ95aW03D9x2TYuadoR8bPh+pi/z6lYWspYU81QSjNAExy8F6+1dV5KBILZXu4R2dtawmX7SjKtCP8sEHg==",
+      "path": "pdfsharp-migradoc-gdi/1.50.5147",
+      "hashPath": "pdfsharp-migradoc-gdi.1.50.5147.nupkg.sha512"
+    }
+  }
+}

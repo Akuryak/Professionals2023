@@ -1,0 +1,171 @@
+﻿<Page x:Class="TestApiDesktop.Pages.SoloVisitPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestApiDesktop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1100" MinHeight="800" MinWidth="1100"
+      Title="SoloVisitPage" Background="White" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="15" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Background="Orange" BorderBrush="Orange" BorderThickness="1" CornerRadius="20" Grid.ColumnSpan="4">
+                <TextBlock HorizontalAlignment="Center" Text="Информация для пропуска"/>
+            </Border>
+
+            <TextBlock Text="Срок действия заявки" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="с*" Grid.Row="2" Grid.Column="0"/>
+            <DatePicker x:Name="StartDatePicker" Grid.Row="2" Grid.Column="1" SelectedDateChanged="StartDatePicker_SelectedDateChanged"/>
+            <TextBlock Text="по" Grid.Row="2" Grid.Column="2"/>
+            <DatePicker x:Name="EndDatePicker" Grid.Row="2" Grid.Column="3" IsEnabled="False"/>
+
+            <TextBlock Text="Цель посещения: " HorizontalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="4"/>
+
+            <ComboBox x:Name="PurposOfTheVisitComboBox" Grid.ColumnSpan="4" Grid.Row="4">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+        <Grid Grid.Column="1" Margin="15" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Border Background="Orange" BorderBrush="Orange" BorderThickness="1" CornerRadius="20" Grid.ColumnSpan="2">
+                <TextBlock HorizontalAlignment="Center" Text="Принимающая сторона"/>
+            </Border>
+            <TextBlock Text="Подразделение*: " Grid.Row="1"/>
+            <ComboBox x:Name="SubdivisionComboBox" Grid.Row="2" Grid.ColumnSpan="4" SelectionChanged="SubdivisionComboBox_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Text="ФИО*: " Grid.Row="3"/>
+            <TextBox x:Name="FullNameTextbox" Grid.Row="4" TextChanged="FullNameTextbox_TextChanged" IsEnabled="False"/>
+            <Image Source="../Images/User.jpg" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+            <ListBox x:Name="FullnameStaffsListBox" Grid.Row="5" Grid.ColumnSpan="2" SelectionChanged="FullnameStaffsListBox_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=FullName}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid Margin="15" Grid.Row="1" Grid.ColumnSpan="2" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Orange" Background="Orange" BorderThickness="1" CornerRadius="20" Grid.ColumnSpan="6">
+                <TextBlock Text="Информация о посетителе" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <TextBlock Text="Фамилия*: " Grid.Row="1"/>
+            <TextBox x:Name="SurnameTextBox" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Text="Организация: " Grid.Row="1" Grid.Column="2"/>
+            <TextBox x:Name="OrganizationTextBox" Grid.Row="1" Grid.Column="3"/>
+            <Grid Margin="15" Grid.Row="1" Grid.RowSpan="5" Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="UserPhotoImage" Source="../Images/User.jpg" Stretch="Fill"/>
+                <Button Template="{DynamicResource ButtonTemplate1}" x:Name="UploadPhoto" Content="Загрузить фото" Grid.Row="1" Click="UploadPhoto_Click"/>
+            </Grid>
+            
+            <TextBlock Text="Имя*: " Grid.Row="2"/>
+            <TextBox x:Name="NameTextBox" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Text="Примечание: " Grid.Row="2" Grid.Column="2"/>
+            <TextBox x:Name="DiscriptionTextBox" Grid.Row="2" Grid.Column="3"/>
+
+            <TextBlock Text="Отчество*: " Grid.Row="3"/>
+            <TextBox x:Name="PatronomicTextBox" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Text="Дата рождения: " Grid.Row="3" Grid.Column="2"/>
+            <DatePicker x:Name="BirthdateDatePicker" Grid.Row="3" Grid.Column="3"/>
+
+            <TextBlock Text="Телефон: " Grid.Row="4"/>
+            <TextBox x:Name="PhoneNumberTextBox" ToolTip="Пример: +1 (234) 567-89-10" MaxLength="18" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock Text="Серия: " Grid.Row="4" Grid.Column="2"/>
+            <TextBox x:Name="PassSeriesTextBox" MaxLength="4" Grid.Row="4" Grid.Column="3"/>
+
+            <TextBlock Text="E-mail: " Grid.Row="5"/>
+            <TextBox x:Name="EmailTextBox" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock Text="Номер: " Grid.Row="5" Grid.Column="2"/>
+            <TextBox x:Name="PassNumberTextBox" MaxLength="6" Grid.Row="5" Grid.Column="3"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="525"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Margin="15" Background="LightGray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border BorderBrush="Orange" Background="Orange" BorderThickness="1" CornerRadius="20" Grid.ColumnSpan="5">
+                    <TextBlock Text="Прикрепляемые документы" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <TextBlock Grid.Row="1" Text="прикрепить файл" Foreground="#FF737373" FontWeight="Bold" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+            </Grid>
+            <Grid Margin="15" Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="ClearFormTextBlock" Text="Очистить форму" Foreground="#FF737373" Grid.Column="0" MouseLeftButtonDown="ClearFormTextBlock_MouseLeftButtonDown"/>
+                <Button Template="{DynamicResource ButtonTemplate1}" x:Name="QuitButton" Content=" Выйти " Foreground="Red" VerticalAlignment="Center" Grid.Column="1" Click="QuitButton_Click"/>
+                <Button Template="{DynamicResource ButtonTemplate1}" x:Name="AcceptRequestButton" Content="Оформить заявку" Foreground="Green" VerticalAlignment="Center" Grid.Column="2" Click="AcceptRequestButton_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

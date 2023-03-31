@@ -1,0 +1,84 @@
+﻿<div style="display:flex">
+    <form style="margin:15px">
+        <h3>Информация для пропуска</h3>
+        <div style="display:grid">
+            <p>Сорк действия заявки: </p>
+            <div style="display:flex">
+                <section>с*</section>
+                <input name="startDate" required type="date" min="@DateTime.Now.AddDays(1).ToString("yyyy-mm-dd")" onchange="@SoloVisit.InputDate = this" />
+                <section> по </section>
+                <input name="endDate" required type="date" max="@SoloVisit.InputDate.Value.AddDays(15).ToString("yyyy-mm-dd")" />
+            </div>
+            <p>Цель посещения: </p>
+            <select required>
+                @foreach (PurposOfTheVisit purpose in SoloVisit.GetPurposeOfTheVisits())
+                {
+                    <option id="@purpose.Id" value="@purpose.Id">@purpose.Name</option>
+                }
+            </select>
+        </div>
+    </form>
+    <form style="margin:15px">
+        <h3>Принимающая сторона</h3>
+        <div style="display:grid">
+            <p>Поздразделение*: </p>
+            <select required>
+                @foreach (Division division in SoloVisit.GetDivisions())
+                {
+                    <option id="@division.Id" value="@division.Name">@division.Name</option>
+                }
+            </select>
+            <p>ФИО*:</p>
+            <div style="display:flex">
+                <input name="staffName" type="text" required />
+                <img src="/assets/User.jpg" height="25" width="25" />
+            </div>
+        </div>
+    </form>
+</div>
+<form style="margin:15px">
+    <h3>Информация о посетителе</h3>
+    <div style="display:flex">
+        <div style="display:grid">
+            <p>Фамилия*: </p>
+            <input name="surname" type="text" required />
+            <p>Имя*: </p>
+            <input name="name" type="text" required />
+            <p>Отчество*: </p>
+            <input name="patronomic" type="text" required />
+            <p>Телефон: </p>
+            <input name="phoneNumber" type="tel" placeholder="(XXX) XXX-XXXX" pattern="\(\d{3}\) \d{3}\-\d{4}" />
+            <p>E-mail: </p>
+            <input name="email" type="email" />
+        </div>
+        <br />
+        <div style="display:grid">
+            <p>Организация: </p>
+            <input name="organisation" type="text" />
+            <p>Примечание: </p>
+            <input name="discription" type="text" />
+            <p>Дата рождения: </p>
+            <input name="birthdate" type="date" />
+            <p>Серия: </p>
+            <input name="series" type="number" maxlength="4" />
+            <p>Номер: </p>
+            <input name="number" type="number" maxlength="6" />
+        </div>
+        <div style="display:flex;justify-content:center;vertical-align:central">
+            <img asp-for="userImage" src="@SoloVisit.UserPhoto" oninput="@SoloVisit.UserPhoto = this" width="50" height="50" />
+            <input name="userImage" type="file" />
+        </div>
+    </div>
+</form>
+<div style="display:flex">
+    <form style="margin:15px">
+        <h3>Прикрепляемые документы</h3>
+        <div>
+            <input name="userPass" type="file" />
+        </div>
+    </form>
+    <form method="post" style="margin:50px">
+        <button type="submit" asp-action="SoloVisit">Очистить форму</button>
+        <button type="submit" asp-action="AddNewRequest">Оформить заявку</button>
+    </form>
+</div>
