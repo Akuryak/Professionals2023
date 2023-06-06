@@ -240,11 +240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daunello\\Desktop\\123\\TerminalDivisionEmployee\\TerminalDivisionEmployee.csproj",
+      "projectUniqueName": "C:\\Users\\Daunello\\Desktop\\Test-main\\TerminalDivisionEmployee\\TerminalDivisionEmployee.csproj",
       "projectName": "TerminalDivisionEmployee",
-      "projectPath": "C:\\Users\\Daunello\\Desktop\\123\\TerminalDivisionEmployee\\TerminalDivisionEmployee.csproj",
+      "projectPath": "C:\\Users\\Daunello\\Desktop\\Test-main\\TerminalDivisionEmployee\\TerminalDivisionEmployee.csproj",
       "packagesPath": "C:\\Users\\Daunello\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daunello\\Desktop\\123\\TerminalDivisionEmployee\\obj\\",
+      "outputPath": "C:\\Users\\Daunello\\Desktop\\Test-main\\TerminalDivisionEmployee\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daunello\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -305,7 +305,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },

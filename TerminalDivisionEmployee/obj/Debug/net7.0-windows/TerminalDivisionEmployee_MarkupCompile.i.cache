@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Daunello\Desktop\123\TerminalDivisionEmployee\obj\Debug\net7.0-windows\
+C:\Users\Daunello\Desktop\Test-main\TerminalDivisionEmployee\obj\Debug\net7.0-windows\
 TerminalDivisionEmployee
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\Daunello\Desktop\123\TerminalDivisionEmployee\App.xaml
+C:\Users\Daunello\Desktop\Test-main\TerminalDivisionEmployee\App.xaml
 5-635458957
 
 19-442408819
-208-1499530070
+207-225396494
 Pages\AutorizationPage.xaml;Pages\RequestsListPage.xaml;Windows\MainWindow.xaml;Windows\ReportWindow.xaml;Windows\RequestInfoWindow.xaml;
 
-True
+False
 
